@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fintech Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="app.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Fintech Platform</h1>
+            <nav>
+                <ul>
+                    <li><a href="#dashboard">Dashboard</a></li>
+                    <li><a href="#transactions">Transactions</a></li>
+                    <li><a href="#account">Account</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <main>
+            <section id="dashboard" class="section active">
+                <h2>Dashboard</h2>
+                <div class="balance-card">
+                    <h3>Current Balance</h3>
+                    <p id="balance">$0.00</p>
+                </div>
+                <button id="new-transaction" class="btn">New Transaction</button>
+            </section>
+            
+            <section id="transactions" class="section">
+                <h2>Transactions</h2>
+                <ul id="transaction-list"></ul>
+            </section>
+            
+            <section id="account" class="section">
+                <h2>Account</h2>
+                <div class="account-details">
+                    <p>Name: <span id="account-name">Kartikeydheer Srivastava</span></p>
+                    <p>Account Number: <span id="account-number">130604</span></p>
+                </div>
+            </section>
+        </main>
+    </div>
+    
+    <div id="transaction-popup" class="popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <h2>New Transaction</h2>
+            <form id="transaction-form">
+                <input type="number" id="amount" placeholder="Amount" required>
+                <select id="transaction-type" required>
+                    <option value="deposit">Deposit</option>
+                    <option value="withdrawal">Withdrawal</option>
+                    <option value="transfer">Transfer</option>
+                    <option value="payment">Payment</option>
+                </select>
+                <input type="text" id="name" placeholder="Name" required>
+                <input type="text" id="card-number" placeholder="Card Number" required >
+                <input type="month" id="expiry-date" placeholder="Expiry Date (MM/YY)" required>
+                <input type="text" id="cvv" placeholder="CVV" pattern="\d{3,4}" required>
+                <button type="submit" class="btn">Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

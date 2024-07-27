@@ -1,0 +1,5 @@
+version: 4.32.0
+endpoint: http://localhost:8080
+admin_secret: your-admin-secret
+metadata_directory: metadata
+migrations_directory: migrations
